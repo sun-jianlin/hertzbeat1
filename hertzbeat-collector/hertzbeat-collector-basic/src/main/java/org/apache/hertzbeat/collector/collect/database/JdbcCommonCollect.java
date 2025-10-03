@@ -523,6 +523,8 @@ public class JdbcCommonCollect extends AbstractCollect {
                     + "?useUnicode=true&characterEncoding=utf-8&useSSL=false";
             case "postgresql" -> "jdbc:postgresql://" + host + ":" + port
                     + "/" + (jdbcProtocol.getDatabase() == null ? "" : jdbcProtocol.getDatabase());
+            case "nds" -> "jdbc:nds://" + host + ":" + port
+                    + "/" + (jdbcProtocol.getDatabase() == null ? "" : jdbcProtocol.getDatabase());
             case "clickhouse" -> "jdbc:clickhouse://" + host + ":" + port
                     + "/" + (jdbcProtocol.getDatabase() == null ? "" : jdbcProtocol.getDatabase());
             case "sqlserver" -> "jdbc:sqlserver://" + host + ":" + port
